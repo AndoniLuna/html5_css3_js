@@ -12,6 +12,45 @@
 
 <body onload="init();">
 
+
+	<label for="fecha" >Fecha:</label>
+	<input type="text" tabindex="1" id="fecha" name="fecha" placeholder="dd/mm/aaaa" />
+	<script>
+		var input_fecha = document.getElementById("fecha");
+		var teclas_validas = ["0","1","2","3","4","5","6","7","8","9"];
+		var barra = "/";
+		//var fecha_value = input_fecha.value; 
+		
+		input_fecha.onkeyup = function(event){
+			var tecla = event.key;
+			var valor = input_fecha.value;
+			console.log('tecla pulsada: ' + tecla );
+			console.log('Valor fecha: ' + valor );
+			
+			//comprobar si es numero
+			if ( -1 === teclas_validas.indexOf(tecla) ){
+				console.log('No esta permitido');
+			}else{
+				console.log('tecla correcta');
+				//Comprobacion del Dia
+				if ( valor.length === 2 ){
+					if ( valor > 0 && valor <= 31 ){
+						valor = valor + barra;
+					}else{
+						valor = "";
+					}	
+				}
+				
+			}
+			
+			//actualizar input value
+			input_fecha.value = valor;
+			
+			console.log('terminamos');
+		};
+	
+	</script>
+
     <nav>
         <ul>
             <li>
