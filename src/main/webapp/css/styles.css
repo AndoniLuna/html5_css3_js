@@ -1,0 +1,52 @@
+/* importar RESET  */
+
+@import 'reset.css';
+
+/* Nuestros Estilos */
+
+body {
+    background-color: lightblue;
+}
+.contenedor {
+    width: 1024px;
+    background-color: white;
+    margin: 0 auto;
+}
+table {
+    margin: 0 auto;
+}
+table td {
+    border: 1px solid grey;
+}
+input {
+    padding: 3px 10px 4px;
+    /*
+    border-width: 2px;
+    border-style: solid;
+    border-color: beige;
+    */
+    border: 2px solid beige;
+    margin: 0 auto;
+}
+
+/* Selectores Basicos 
+
+     1. Etiqueta     por ejemplo "table", "p", etc
+     2. id           # 
+     3. class        .   
+
+*/
+
+button {
+    background-color: grey;
+    border-radius: 10px;
+    color: whitesmoke;
+    margin: 0 auto;
+    display: block;
+}
+#tabla_clase {
+    border-radius: 10px;
+}
+.tatocau {
+    background-color: deeppink;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamiento Absoluto</title>
+</head>
+
+<style>
+    .contenedor {
+        border: 1px solid #000;
+        width: 158px;
+        position: relative;
+        padding: 5px;
+    }
+    
+    .caja1x1 {
+        width: 50px;
+        height: 50px;
+        background-color: teal;
+        display: inline-block;
+        /*margin-right: 5px;*/
+    }
+    
+    .caja3x1 {
+        width: 157px;
+        height: 50px;
+        background-color: blueviolet;
+    }
+    
+    .absoluto {
+        background-color: chartreuse;
+        position: absolute;
+        top: 35px;
+        right: 20px;
+    }
+
+</style>
+
+<body>
+    <h1>Posicionamiento Absoluto</h1>
+
+    <div class="contenedor">
+        <div class="caja1x1"></div>
+        <div class="caja1x1 absoluto"></div>
+        <div class="caja1x1"></div>
+        <div class="caja3x1"></div>
+    </div>
+
+</body>
+
+</html>

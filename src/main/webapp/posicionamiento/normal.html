@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamiento Normal</title>
+    <style>
+        #content {
+            width: 600px;
+            height: 500px;
+            border: 5px solid black;
+            margin: 0 auto;
+        }
+
+        span {
+            width: 140px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button id="boton">Crear Span</button>
+
+    <input type="reset" name="Limpiar" onclick="limpiar();">
+    <input type="color" id="input_color" name="favcolor" value="#ff0000">
+
+    <div id="content"></div>
+
+    <script>
+        var cont = 0;
+        var color = "#FF0000";
+        var content = document.getElementById('content');
+
+        document.getElementById('boton').onclick = function() {
+            console.log('creando Span....');
+
+            var color = document.getElementById("input_color").value;
+            var span = "<span style='background-color: " + color + ";'>" + cont + "</span>";
+            cont++;
+            content.innerHTML = content.innerHTML + span;
+        }
+
+        function limpiar() {
+            content.innerHTML = "";
+        }
+
+    </script>
+</body>
+
+</html>
